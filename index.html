@@ -107,6 +107,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.05;let
 .badge{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border:1px solid var(--border-subtle);border-radius:999px;font-size:11px;font-weight:500;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
 .badge::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
 .hero__title{margin-top:36px;font-size:clamp(2.75rem,1.2rem + 6.2vw,6.75rem);line-height:.98;letter-spacing:-.02em;font-weight:400;color:var(--text-main);text-wrap:balance}
+h1.badge{font-family:inherit;line-height:1.4;margin:0}
+.hero__title{font-family:var(--font-display)}
 .hero__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
 .hero__text{margin-top:30px;max-width:58ch;font-size:clamp(1rem,.95rem + .35vw,1.1875rem);font-weight:300;line-height:1.7;color:var(--text-muted)}
 .hero__creds{margin-top:34px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;font-size:11px;font-weight:500;letter-spacing:.26em;color:var(--text-muted);text-transform:uppercase}
@@ -268,6 +270,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.05;let
 .quote{position:relative;max-width:1080px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(24px,6vw,96px);background:var(--bg-card);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);text-align:center;overflow:hidden;isolation:isolate}
 .quote__mark{position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:clamp(180px,24vw,300px);color:var(--gold);opacity:.08;z-index:-1}
 .quote blockquote p{font-family:var(--font-display);font-style:italic;font-size:clamp(1.5rem,1.05rem + 1.7vw,2.6rem);line-height:1.32;color:var(--text-main);text-wrap:pretty}
+.thanks__demo{margin-top:14px;font-size:12px;opacity:.6;font-style:italic}
+.quote__google{display:inline-block;margin-top:18px;font-size:13px;color:var(--text-main);opacity:.8;text-decoration:none;border-bottom:1px solid var(--border-subtle);padding-bottom:3px}
+.quote__google:hover{opacity:1;color:var(--gold)}
 .quote figcaption{margin-top:36px;font-size:12px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
 .quote__stars{display:flex;justify-content:center;gap:6px;margin-bottom:28px;color:var(--gold)}
 .quote__stars svg{width:14px;height:14px}
@@ -362,6 +367,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.05;let
 .pl__bar span{display:block;width:0;height:100%;background:#C5A880}
 body.is-loading{overflow:hidden;height:100vh}
 .no-preload #preloader{display:none}
+@media (max-width:767px){#preloader{display:none!important}body.is-loading{overflow:auto;height:auto}}
 
 main section{scroll-margin-top:calc(var(--nav-h) + 30px)}
 
@@ -436,8 +442,8 @@ main section{scroll-margin-top:calc(var(--nav-h) + 30px)}
       </svg>
     </div>
     <div class="hero__inner">
-      <span class="badge hero-reveal">Estate Planning &amp; Probate · West Houston</span>
-      <h1 class="hero__title hero-reveal" id="hero-title">Your Legacy, Preserved <em>Without Compromise.</em></h1>
+      <h1 class="badge hero-reveal">Estate Planning &amp; Probate Attorney · West Houston</h1>
+      <p class="hero__title hero-reveal" id="hero-title">Your Legacy, Preserved <em>Without Compromise.</em></p>
       <p class="hero__text hero-reveal">Certainty for your family, protection for what you have built, and a calm, compassionate guide when it matters most. Every will, trust and probate matter is explained in plain language, so you always know what you are signing and why.</p>
       <p class="hero__creds hero-reveal"><span>Licensed in Texas · Oklahoma · New Mexico</span><span>Steed Barker Boyd Madden</span></p>
       <div class="hero__ctas hero-reveal">
@@ -575,6 +581,7 @@ main section{scroll-margin-top:calc(var(--nav-h) + 30px)}
       <div class="quote__stars" aria-label="Five-star review"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg></div>
       <blockquote><p>“Katherine was fantastic to work with. Very knowledgeable, very responsive to emails or phone calls. She helped guide us through the process and ensured we understood what our options were and what those choices meant. We will absolutely use her services again if the need arises.”</p></blockquote>
       <figcaption>— Heather R. · Estate Planning Client</figcaption>
+      <a class="quote__google" href="https://www.google.com/search?q=Katherine+Boyd+Law+Houston+reviews" target="_blank" rel="noopener">★ 5.0 on Google Reviews · Read reviews <span aria-hidden="true">↗</span></a>
     </figure>
     <div class="faq2">
       <div class="faq2__head">
@@ -635,6 +642,7 @@ main section{scroll-margin-top:calc(var(--nav-h) + 30px)}
         <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M20 33l8 8 16-17"/></svg>
         <h3>Request Received</h3>
         <p>Thank you. Our office will contact you shortly to confirm your appointment.</p>
+        <p class="thanks__demo">Sample site: nothing was sent. On the live site, each request goes straight to Katherine's inbox.</p>
       </div>
     </div>
   </div>
@@ -678,6 +686,8 @@ document.addEventListener('DOMContentLoaded',function(){
     gsap.timeline().to('.hero-reveal',{y:0,opacity:1,duration:1.1,ease:'power3.out',stagger:.14});
     gsap.from('.hero__mark',{opacity:0,scale:.92,duration:2.4,ease:'power3.out'});
   }
+  var seen=false; try{seen=sessionStorage.getItem('kb-pre')==='1';sessionStorage.setItem('kb-pre','1')}catch(e){}
+  if(pre&&(seen||window.matchMedia('(max-width:767px)').matches)){endPreload();pre=null;}
   if(window.gsap&&!reduce&&pre){
     if(lenis&&lenis.stop)lenis.stop();
     window.scrollTo(0,0);
