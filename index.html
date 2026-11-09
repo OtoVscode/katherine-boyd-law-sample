@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en" class="js-anim">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katherine Boyd Law · Estate Planning & Probate Attorney in West Houston</title>
+<meta name="description" content="Estate planning and will-based probate for Houston families. Katherine Boyd, 950 Echo Lane, Suite 200, Houston, TX 77024. By appointment, Monday to Friday, 9 to 4.">
+<meta name="theme-color" content="#0F1115">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LegalService","name":"Katherine Boyd Law","description":"Estate planning and will-based probate attorney in West Houston.","telephone":"+1-832-586-6573","email":"kboyd@steedbarkerlaw.com","address":{"@type":"PostalAddress","streetAddress":"950 Echo Lane, Suite 200","addressLocality":"Houston","addressRegion":"TX","postalCode":"77024","addressCountry":"US"},"openingHours":"Mo-Fr 09:00-16:00","areaServed":"Houston, Texas"}
+</script>
+<style>
+:root{
+  --bg-main:#0F1115;
+  --bg-card:#171A21;
+  --gold:#C5A880;
+  --gold-light:#E2D4BE;
+  --text-main:#F3F1EC;
+  --text-muted:#9E9A92;
+  --border-subtle:rgba(197,168,128,.18);
+  --night:var(--bg-main);
+  --night-2:var(--bg-card);
+  --ivory:var(--text-main);
+  --stone:var(--text-muted);
+  --gold-line:rgba(197,168,128,.45);
+  --font-display:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --font-body:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --ease-soft:cubic-bezier(.65,0,.35,1);
+  --t-fast:.25s;
+  --t-med:.5s;
+  --t-slow:1.1s;
+  --gutter:clamp(16px,3vw,40px);
+  --nav-h:76px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+body{min-height:100vh;background:var(--night);color:var(--ivory);font-family:var(--font-body);font-size:clamp(1rem,.96rem + .2vw,1.0625rem);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img,svg,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul,ol{list-style:none}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+::selection{background:var(--gold);color:var(--night)}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.skip{position:fixed;left:-999px;top:12px;z-index:200;padding:10px 16px;background:var(--ivory);color:var(--night)}
+.skip:focus{left:12px}
+
+/* Navigation */
+.nav{position:fixed;top:14px;left:var(--gutter);right:var(--gutter);z-index:100;height:var(--nav-h);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:0 clamp(18px,2vw,28px);background:rgba(15,17,21,.75);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid transparent;border-bottom-color:var(--border-subtle);border-radius:999px;transition:transform var(--t-med) var(--ease),background-color var(--t-med) var(--ease)}
+.nav.is-scrolled{background:rgba(15,17,21,.86);border-color:var(--border-subtle)}
+.nav.is-hidden{transform:translateY(calc(-100% - 20px))}
+.brand{justify-self:start;display:flex;flex-direction:column;line-height:1}
+.brand__name{font-family:var(--font-display);font-size:28px;font-weight:500;letter-spacing:.32em;color:var(--ivory)}
+.brand__sub{margin-top:6px;font-size:9.5px;font-weight:500;letter-spacing:.28em;color:var(--stone)}
+.nav__links{display:flex;gap:clamp(18px,2.4vw,36px)}
+.nav__links a{position:relative;font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--stone);padding:6px 0;transition:color var(--t-fast) var(--ease)}
+.nav__links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform var(--t-med) var(--ease)}
+.nav__links a:hover,.nav__links a.is-active{color:var(--ivory)}
+.nav__links a:hover::after,.nav__links a.is-active::after{transform:scaleX(1);transform-origin:left}
+.nav__right{justify-self:end;display:flex;align-items:center;gap:12px}
+.cta{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px;border:1px solid var(--gold-line);color:var(--gold);font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;position:relative;overflow:hidden;transition:color var(--t-med) var(--ease),border-color var(--t-med) var(--ease)}
+.cta::before{content:"";position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform var(--t-med) var(--ease);z-index:-1}
+.cta:hover{color:var(--night);border-color:var(--gold-light)}
+.cta:hover::before{background:var(--gold-light)}
+.cta:hover::before{transform:translateY(0)}
+.cta{isolation:isolate}
+.cta svg{width:14px;height:14px;transition:transform var(--t-med) var(--ease)}
+.cta:hover svg{transform:translateX(3px)}
+.burger{display:none;width:44px;height:44px;position:relative}
+.burger span{position:absolute;left:11px;right:11px;height:1px;background:var(--ivory);transition:transform var(--t-med) var(--ease),opacity var(--t-fast)}
+.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:26px}
+.nav.is-open .burger span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.nav.is-open .burger span:nth-child(2){transform:translateY(-4.5px) rotate(-45deg)}
+
+/* Mobile menu */
+.menu{position:fixed;inset:0;z-index:90;background:var(--night);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--nav-h) + 40px) var(--gutter) 40px;opacity:0;visibility:hidden;transition:opacity var(--t-med) var(--ease),visibility var(--t-med)}
+.menu.is-open{opacity:1;visibility:visible}
+.menu a{display:block;font-family:var(--font-display);font-size:clamp(40px,11vw,56px);line-height:1.15;color:var(--ivory);opacity:0;transform:translateY(20px);transition:opacity var(--t-med) var(--ease),transform var(--t-med) var(--ease),color var(--t-fast)}
+.menu.is-open a{opacity:1;transform:none}
+.menu.is-open a:nth-child(2){transition-delay:.05s}.menu.is-open a:nth-child(3){transition-delay:.1s}.menu.is-open a:nth-child(4){transition-delay:.15s}.menu.is-open a:nth-child(5){transition-delay:.2s}
+.menu a:hover{color:var(--gold)}
+.menu__foot{margin-top:48px;color:var(--stone);font-size:14px;line-height:1.7}
+.menu__foot a{display:inline;font-family:var(--font-body);font-size:14px;color:var(--gold);opacity:1;transform:none}
+
+
+/* Hero */
+.hero-section{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;padding:calc(var(--nav-h) + 72px) var(--gutter) 96px;overflow:hidden;isolation:isolate}
+.hero__mark{position:absolute;left:50%;top:52%;width:min(78vw,760px);transform:translate(-50%,-50%);opacity:.2;z-index:-1;pointer-events:none}
+.hero__mark svg{width:100%;height:auto;overflow:visible}
+.hero__mark .ring{fill:none;stroke:var(--gold);stroke-width:1}
+.hero__mark text{fill:none;stroke:var(--gold);stroke-width:1;font-family:var(--font-display);font-weight:400}
+.hero__mark .label{fill:var(--gold);stroke:none;font-family:var(--font-body);font-size:13px;letter-spacing:6px}
+.hero__mark .spin{transform-origin:400px 400px;animation:seal 90s linear infinite}
+@keyframes seal{to{transform:rotate(360deg)}}
+.hero__inner{max-width:1080px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border:1px solid var(--border-subtle);border-radius:999px;font-size:11px;font-weight:500;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+.badge::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.hero__title{margin-top:36px;font-size:clamp(2.75rem,1.2rem + 6.2vw,6.75rem);line-height:.98;letter-spacing:-.02em;font-weight:400;color:var(--text-main);text-wrap:balance}
+.hero__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
+.hero__text{margin-top:30px;max-width:58ch;font-size:clamp(1rem,.95rem + .35vw,1.1875rem);font-weight:300;line-height:1.7;color:var(--text-muted)}
+.hero__creds{margin-top:34px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;font-size:11px;font-weight:500;letter-spacing:.26em;color:var(--text-muted);text-transform:uppercase}
+.hero__creds span+span{position:relative;padding-left:22px}
+.hero__creds span+span::before{content:"";position:absolute;left:0;top:50%;width:1px;height:14px;background:var(--border-subtle);transform:translateY(-50%)}
+.hero__ctas{margin-top:48px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px 36px}
+.btn-gold{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 34px;border-radius:999px;background:var(--gold);color:var(--bg-main);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;overflow:hidden;isolation:isolate;transition:transform var(--t-med) var(--ease),box-shadow var(--t-med) var(--ease)}
+.btn-gold::before{content:"";position:absolute;inset:0;background:var(--gold-light);transform:translateY(101%);transition:transform var(--t-med) var(--ease);z-index:-1}
+.btn-gold:hover{box-shadow:0 0 0 6px rgba(197,168,128,.12),0 12px 40px -12px rgba(197,168,128,.55)}
+.btn-gold:hover::before{transform:translateY(0)}
+.btn-gold:active{transform:scale(.98)}
+.link-gold{position:relative;padding:6px 0;font-size:14px;letter-spacing:.04em;color:var(--text-main)}
+.link-gold::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);opacity:.5;transform-origin:left;transition:opacity var(--t-med),transform var(--t-med) var(--ease)}
+.link-gold:hover::after{opacity:1}
+.link-gold .arrow{display:inline-block;margin-left:6px;color:var(--gold);transition:transform var(--t-med) var(--ease)}
+.link-gold:hover .arrow{transform:translateY(3px)}
+.js-anim .hero-reveal{opacity:0;transform:translateY(30px)}
+@media (max-width:640px){
+  .hero-section{padding-top:calc(var(--nav-h) + 56px)}
+  .badge{font-size:9.5px;letter-spacing:.18em;padding:8px 14px}
+  .hero__title{margin-top:28px}
+  .hero__creds{flex-direction:column;gap:8px;letter-spacing:.2em;font-size:10px}
+  .hero__creds span+span{padding-left:0}
+  .hero__creds span+span::before{display:none}
+  .hero__ctas{flex-direction:column;width:100%}
+  .btn-gold{width:100%;padding:0 18px;font-size:12px;letter-spacing:.1em}
+  .hero__mark{width:130vw;opacity:.14}
+}
+@media (prefers-reduced-motion:reduce){.hero__mark .spin{animation:none}}
+
+/* Simulator */
+.sim{position:relative;padding:clamp(96px,12vw,160px) var(--gutter);background:var(--bg-main)}
+.sim::before{content:"";position:absolute;left:var(--gutter);right:var(--gutter);top:0;height:1px;background:var(--border-subtle)}
+.sim__head{max-width:860px;margin:0 auto;text-align:center}
+.eyebrow{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.sim__title{margin-top:22px;font-size:clamp(2.25rem,1.3rem + 3.6vw,4.5rem);line-height:1.02;text-wrap:balance}
+.sim__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
+.sim__sub{margin:22px auto 0;max-width:52ch;font-weight:300;color:var(--text-muted)}
+.sim__grid{max-width:1180px;margin:72px auto 0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,56px);align-items:start}
+.sim__controls{display:grid;gap:14px}
+.q{padding:26px 28px;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:18px;transition:opacity var(--t-med) var(--ease),filter var(--t-med) var(--ease)}
+.q.is-off{opacity:.35;filter:grayscale(1)}
+.q fieldset{border:0;min-width:0}
+.q legend{float:left;width:100%;display:flex;gap:14px;align-items:baseline;font-family:var(--font-display);font-size:clamp(1.35rem,1.1rem + .6vw,1.65rem);line-height:1.2;color:var(--text-main)}
+.q legend span{font-family:var(--font-body);font-size:11px;letter-spacing:.2em;color:var(--gold)}
+.q .opts{clear:both;padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;inset:0;opacity:0;cursor:pointer;margin:0}
+.opt span{display:flex;align-items:center;justify-content:center;height:50px;border-radius:999px;border:1px solid var(--border-subtle);font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);transition:background-color var(--t-fast),color var(--t-fast),border-color var(--t-fast),transform var(--t-fast) var(--ease)}
+.opt:hover span{border-color:var(--gold);color:var(--text-main)}
+.opt input:checked+span{background:var(--gold);border-color:var(--gold);color:var(--bg-main)}
+.opt input:focus-visible+span{outline:1px solid var(--gold-light);outline-offset:4px}
+.opt input:active+span{transform:scale(.97)}
+.opt input:disabled{cursor:not-allowed}
+.q__note{clear:both;margin-top:12px;font-size:13px;color:var(--text-muted)}
+.verdict{position:sticky;top:120px;padding:clamp(28px,3.5vw,52px);border-radius:24px;background:var(--bg-card);border:1px solid var(--border-subtle);overflow:hidden;isolation:isolate}
+.verdict::after{content:"";position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;border:1px solid var(--border-subtle);z-index:-1}
+.verdict__label{font-size:11px;font-weight:500;letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
+.verdict__case{margin-top:10px;font-size:13px;color:var(--text-muted)}
+.verdict__title{margin-top:22px;font-size:clamp(1.9rem,1.3rem + 1.8vw,2.9rem);line-height:1.05;color:var(--text-main)}
+.verdict__rows{margin-top:30px;display:grid;gap:22px}
+.vrow{padding-top:20px;border-top:1px solid var(--border-subtle)}
+.vrow h4{font-family:var(--font-body);font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
+.vrow p{margin-top:8px;font-weight:300;color:var(--text-main);line-height:1.65}
+.bar{margin-top:14px;height:6px;border-radius:99px;background:rgba(243,241,236,.07);display:flex;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold);transition:width .9s var(--ease)}
+.bar i+i{background:var(--text-muted)}
+.legend{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--text-muted)}
+.legend b{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;background:var(--gold)}
+.legend span:nth-child(2) b{background:var(--text-muted)}
+.verdict__foot{margin-top:30px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between}
+.verdict__disc{flex:1 1 260px;font-size:12px;line-height:1.6;color:var(--text-muted)}
+.js-anim .sim-reveal{opacity:0;transform:translateY(30px)}
+@media (max-width:900px){
+  .sim__grid{grid-template-columns:1fr;margin-top:48px}
+  .verdict{position:relative;top:auto}
+  .q{padding:22px 20px}
+  .verdict__foot .btn-gold{width:100%}
+}
+
+/* Services */
+.svc{padding:clamp(96px,12vw,160px) var(--gutter);background:var(--bg-main)}
+.svc__head{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end}
+.svc__title{margin-top:20px;font-size:clamp(2.25rem,1.3rem + 3.4vw,4.25rem);line-height:1.02;text-wrap:balance}
+.svc__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
+.svc__intro{font-weight:300;color:var(--text-muted);max-width:46ch;justify-self:end}
+.svc__rule{max-width:1180px;margin:56px auto 0;height:1px;background:var(--gold);opacity:.6;transform-origin:left center}
+.js-anim .svc__rule{transform:scaleX(0)}
+.svc__grid{max-width:1180px;margin:56px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,28px)}
+.card{position:relative;display:flex;flex-direction:column;padding:clamp(28px,3.4vw,52px);background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:24px;overflow:hidden;isolation:isolate;transition:border-color var(--t-med) var(--ease),transform var(--t-med) var(--ease)}
+.card:hover{border-color:rgba(197,168,128,.4);transform:translateY(-4px)}
+.card__num{font-family:var(--font-display);font-style:italic;font-size:15px;color:var(--gold)}
+.card h3{margin-top:18px;font-size:clamp(1.85rem,1.3rem + 1.4vw,2.6rem);line-height:1.06;color:var(--text-main)}
+.card h3 small{display:block;margin-top:8px;font-family:var(--font-body);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted)}
+.card__desc{margin-top:20px;font-weight:300;color:var(--text-muted);line-height:1.7;max-width:48ch}
+.deliv{margin-top:30px;display:grid}
+.deliv li{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--border-subtle)}
+.deliv li:last-child{border-bottom:1px solid var(--border-subtle)}
+.deliv svg{width:16px;height:16px;margin-top:5px;color:var(--gold)}
+.deliv b{display:block;font-weight:500;color:var(--text-main)}
+.deliv span{display:block;margin-top:3px;font-size:14px;font-weight:300;color:var(--text-muted)}
+.card__foot{margin-top:auto;padding-top:34px}
+.timeline{display:grid;gap:10px;padding:22px 24px;border-radius:16px;background:rgba(197,168,128,.06);border:1px solid var(--border-subtle)}
+.timeline__label{font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.tl{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.tl span{font-size:14px;color:var(--text-muted)}
+.tl b{flex:none;font-family:var(--font-display);font-size:24px;font-weight:500;color:var(--gold-light)}
+.focus{padding:22px 24px;border-radius:16px;background:rgba(197,168,128,.06);border:1px solid var(--border-subtle);font-family:var(--font-display);font-style:italic;font-size:clamp(1.25rem,1.1rem + .5vw,1.5rem);line-height:1.35;color:var(--gold-light)}
+.focus::before{content:"\201C";display:block;font-size:44px;line-height:.6;color:var(--gold);margin-bottom:6px}
+.js-anim .svc-reveal{opacity:0;transform:translateY(30px)}
+.js-anim .card.svc-reveal{opacity:0;transform:translateY(48px)}
+@media (max-width:900px){
+  .svc__head{grid-template-columns:1fr}
+  .svc__intro{justify-self:start}
+  .svc__grid{grid-template-columns:1fr}
+  .tl{flex-direction:column;gap:2px}
+}
+
+/* Process + profile */
+.proc{padding:clamp(96px,12vw,160px) var(--gutter);background:var(--bg-main)}
+.proc__head{max-width:1180px;margin:0 auto;text-align:center}
+.proc__title{margin-top:20px;font-size:clamp(2.25rem,1.3rem + 3.4vw,4.25rem);line-height:1.02;text-wrap:balance}
+.proc__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
+.steps{max-width:1180px;margin:72px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);counter-reset:none}
+.step{position:relative;padding:36px 4px 0;border-top:1px solid var(--border-subtle)}
+.step__num{display:block;font-family:var(--font-display);font-size:clamp(4.5rem,3rem + 4vw,7rem);font-weight:400;line-height:.9;color:var(--gold)}
+.step h3{margin-top:22px;font-size:clamp(1.5rem,1.2rem + .9vw,2rem);line-height:1.1;color:var(--text-main)}
+.step p{margin-top:14px;font-weight:300;color:var(--text-muted);line-height:1.7;max-width:36ch}
+.profile{max-width:1180px;margin:clamp(80px,10vw,128px) auto 0;padding:clamp(28px,5vw,72px);background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:28px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:center}
+.insignia{width:100%;max-width:380px;margin:0 auto;color:var(--gold)}
+.insignia svg{width:100%;height:auto;overflow:visible}
+.insignia .ln{fill:none;stroke:currentColor;stroke-width:1}
+.insignia .tx{fill:currentColor;font-family:var(--font-body);font-weight:500}
+.insignia .dp{fill:var(--gold-light);font-family:var(--font-display)}
+.profile h3{font-size:clamp(1.9rem,1.3rem + 1.6vw,2.75rem);line-height:1.08;color:var(--text-main)}
+.profile h3 span{display:block;margin-top:10px;font-family:var(--font-body);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.profile__bio{margin-top:24px;display:grid;gap:14px;font-weight:300;line-height:1.75;color:var(--text-muted);max-width:60ch}
+.profile__bio strong{font-weight:500;color:var(--text-main)}
+.creds{width:100%;margin-top:32px;border-collapse:collapse;font-size:15px}
+.creds th,.creds td{padding:16px 0;border-top:1px solid var(--border-subtle);text-align:left;vertical-align:top}
+.creds tr:last-child th,.creds tr:last-child td{border-bottom:1px solid var(--border-subtle)}
+.creds th{width:34%;padding-right:20px;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.creds td{color:var(--text-main);line-height:1.6}
+.creds td span{display:block;color:var(--text-muted);font-weight:300}
+.js-anim .proc-reveal{opacity:0;transform:translateY(30px)}
+.js-anim .step__num{opacity:0;transform:translateY(40px)}
+@media (max-width:900px){
+  .steps{grid-template-columns:1fr;gap:40px;margin-top:48px}
+  .profile{grid-template-columns:1fr}
+  .insignia{max-width:260px}
+  .creds th,.creds td{display:block;width:100%;border:0;padding:0}
+  .creds tr{display:block;padding:16px 0;border-top:1px solid var(--border-subtle)}
+  .creds tr:last-child{border-bottom:1px solid var(--border-subtle)}
+  .creds th{margin-bottom:6px}
+}
+
+/* Testimonial + FAQ */
+.faqsec{padding:clamp(96px,12vw,160px) var(--gutter);background:var(--bg-main)}
+.quote{position:relative;max-width:1080px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(24px,6vw,96px);background:var(--bg-card);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);text-align:center;overflow:hidden;isolation:isolate}
+.quote__mark{position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:clamp(180px,24vw,300px);color:var(--gold);opacity:.08;z-index:-1}
+.quote blockquote p{font-family:var(--font-display);font-style:italic;font-size:clamp(1.5rem,1.05rem + 1.7vw,2.6rem);line-height:1.32;color:var(--text-main);text-wrap:pretty}
+.quote figcaption{margin-top:36px;font-size:12px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.quote__stars{display:flex;justify-content:center;gap:6px;margin-bottom:28px;color:var(--gold)}
+.quote__stars svg{width:14px;height:14px}
+.faq2{max-width:1180px;margin:clamp(96px,11vw,150px) auto 0;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:start}
+.faq2__head{position:sticky;top:130px}
+.faq2__title{margin-top:20px;font-size:clamp(2.25rem,1.3rem + 3vw,4rem);line-height:1.02}
+.faq2__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
+.faq2__note{margin-top:22px;font-weight:300;color:var(--text-muted);max-width:34ch}
+.faq2__note a{color:var(--gold);border-bottom:1px solid var(--border-subtle);transition:border-color var(--t-fast)}
+.faq2__note a:hover{border-color:var(--gold)}
+.acc{border-top:1px solid var(--border-subtle)}
+.acc__item{border-bottom:1px solid var(--border-subtle)}
+.acc__btn{width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;text-align:left;font-family:var(--font-display);font-size:clamp(1.3rem,1.1rem + .7vw,1.75rem);line-height:1.25;color:var(--text-main);transition:color var(--t-fast)}
+.acc__btn:hover{color:var(--gold-light)}
+.acc__icon{flex:none;position:relative;width:40px;height:40px;border-radius:50%;border:1px solid var(--border-subtle);transition:border-color var(--t-med),background-color var(--t-med),transform var(--t-med) var(--ease)}
+.acc__icon::before,.acc__icon::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1px;background:var(--gold);transform:translate(-50%,-50%)}
+.acc__icon::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform var(--t-med) var(--ease)}
+.acc__btn:hover .acc__icon{border-color:var(--gold)}
+.acc__item.is-open .acc__icon{border-color:var(--gold);transform:rotate(45deg)}
+.acc__panel{height:0;overflow:hidden}
+.acc__panel p{padding:0 64px 30px 0;font-weight:300;line-height:1.75;color:var(--text-muted);max-width:62ch}
+.no-js-acc .acc__panel{height:auto}
+.js-anim .faq-reveal{opacity:0;transform:translateY(30px)}
+@media (max-width:900px){
+  .faq2{grid-template-columns:1fr}
+  .faq2__head{position:static}
+  .acc__panel p{padding-right:0}
+}
+
+/* Contact footer */
+.site-foot{padding:clamp(96px,12vw,160px) var(--gutter) 40px;background:var(--bg-main);border-top:1px solid var(--border-subtle)}
+.cf{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,96px);align-items:start}
+.cf__title{margin-top:20px;font-size:clamp(2.5rem,1.4rem + 4vw,5rem);line-height:1}
+.cf__title em{font-style:italic;font-weight:600;color:var(--gold-light)}
+.cf__sub{margin-top:20px;font-weight:300;color:var(--text-muted);font-size:clamp(1.05rem,1rem + .3vw,1.2rem)}
+.cf__list{margin-top:44px;display:grid}
+.cf__list div{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--border-subtle)}
+.cf__list div:last-child{border-bottom:1px solid var(--border-subtle)}
+.cf__list dt{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);padding-top:4px}
+.cf__list dd{color:var(--text-main);line-height:1.6}
+.cf__list dd span{display:block;color:var(--text-muted);font-weight:300;font-size:14px}
+.cf__list a{border-bottom:1px solid transparent;transition:border-color var(--t-fast),color var(--t-fast)}
+.cf__list a:hover{color:var(--gold-light);border-color:var(--gold-line)}
+.form-card{position:relative;padding:clamp(28px,4vw,56px);background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:24px;overflow:hidden}
+.form-card h3{font-size:clamp(1.7rem,1.3rem + 1vw,2.25rem);color:var(--text-main)}
+.form-card>p{margin-top:8px;font-size:14px;font-weight:300;color:var(--text-muted)}
+.appt{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:26px 24px}
+.field{position:relative;display:flex;flex-direction:column}
+.field--full{grid-column:1/-1}
+.field label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);transition:color var(--t-fast)}
+.field:focus-within label{color:var(--gold)}
+.field input,.field select,.field textarea{width:100%;margin-top:8px;padding:10px 0 12px;background:transparent;border:0;border-bottom:1px solid rgba(243,241,236,.16);border-radius:0;color:var(--text-main);font:inherit;font-weight:300;outline:none;transition:border-color var(--t-med) var(--ease),box-shadow var(--t-med) var(--ease)}
+.field input::placeholder,.field textarea::placeholder{color:rgba(158,154,146,.6)}
+.field input:focus,.field select:focus,.field textarea:focus{border-bottom-color:var(--gold);box-shadow:0 1px 0 0 var(--gold)}
+.field select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:28px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23C5A880' stroke-width='1.2'%3E%3Cpath d='M3 6l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center;background-size:14px}
+.field select option{background:var(--bg-card);color:var(--text-main)}
+.field textarea{resize:vertical;min-height:96px}
+.field input:user-invalid,.field select:user-invalid{border-bottom-color:#c98a7a}
+.appt__actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center;justify-content:space-between;margin-top:6px}
+.appt__actions small{font-size:12px;color:var(--text-muted);max-width:34ch;line-height:1.5}
+.thanks{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;background:var(--bg-card);opacity:0;visibility:hidden;transition:opacity .6s var(--ease),visibility .6s}
+.form-card.is-sent .thanks{opacity:1;visibility:visible}
+.thanks svg{width:64px;height:64px;color:var(--gold)}
+.thanks svg circle,.thanks svg path{fill:none;stroke:currentColor;stroke-width:1}
+.thanks svg path{stroke-dasharray:40;stroke-dashoffset:40;transition:stroke-dashoffset .9s var(--ease) .3s}
+.form-card.is-sent .thanks svg path{stroke-dashoffset:0}
+.thanks h3{margin-top:26px}
+.thanks p{margin-top:14px;max-width:36ch;font-weight:300;color:var(--text-muted);line-height:1.7}
+.bottom{max-width:1180px;margin:clamp(80px,10vw,120px) auto 0;padding-top:28px;border-top:1px solid var(--border-subtle);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 40px;font-size:12px;line-height:1.7;color:var(--text-muted)}
+.bottom__brand{display:flex;flex-direction:column;gap:2px}
+.bottom__brand b{font-family:var(--font-display);font-size:18px;font-weight:500;letter-spacing:.18em;color:var(--text-main)}
+.bottom__legal{text-align:right;max-width:52ch}
+.bottom__note{max-width:1180px;margin:22px auto 0;font-size:11.5px;line-height:1.7;color:rgba(158,154,146,.75)}
+.bottom__note a{color:var(--gold)}
+.js-anim .cf-reveal{opacity:0;transform:translateY(30px)}
+@media (max-width:900px){
+  .cf{grid-template-columns:1fr}
+  .appt{grid-template-columns:1fr}
+  .appt__actions .btn-gold{width:100%}
+  .cf__list div{grid-template-columns:1fr;gap:4px}
+  .bottom{flex-direction:column}
+  .bottom__legal{text-align:left}
+}
+
+/* Preloader */
+#preloader{position:fixed;inset:0;z-index:9999;background:#0F1115;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.pl__seal{width:120px;height:120px;color:#C5A880}
+.pl__seal circle{fill:none;stroke:currentColor;stroke-width:1;stroke-dasharray:340;stroke-dashoffset:340}
+.pl__seal text{fill:currentColor;font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:2px;opacity:0}
+.pl__name{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#E2D4BE;opacity:0;text-align:center;padding:0 16px}
+.pl__bar{width:160px;max-width:60vw;height:1px;background:rgba(197,168,128,.15);overflow:hidden}
+.pl__bar span{display:block;width:0;height:100%;background:#C5A880}
+body.is-loading{overflow:hidden;height:100vh}
+.no-preload #preloader{display:none}
+
+main section{scroll-margin-top:calc(var(--nav-h) + 30px)}
+
+@media (max-width:980px){
+  .nav__links{display:none}
+  .nav{grid-template-columns:1fr auto;height:64px;--nav-h:64px}
+  .burger{display:block}
+  .cta{height:40px;padding:0 14px;font-size:11px;letter-spacing:.12em}
+  .cta svg{display:none}
+}
+@media (max-width:420px){
+  .brand__name{font-size:22px}
+  .brand__sub{font-size:8.5px;letter-spacing:.22em}
+  .nav .cta{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+<body class="is-loading">
+<div id="preloader" aria-hidden="true">
+  <svg class="pl__seal" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="54"/>
+    <circle cx="60" cy="60" r="47"/>
+    <text x="60" y="71" text-anchor="middle">KB</text>
+  </svg>
+  <p class="pl__name">Katherine Boyd Law · Houston</p>
+  <div class="pl__bar"><span></span></div>
+</div>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <a class="brand" href="#hero" aria-label="Katherine Boyd Law, home">
+    <span class="brand__name">BOYD</span>
+    <span class="brand__sub">ESTATE LAW · HOUSTON</span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#simulator">Simulator</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav__right">
+    <a class="cta" href="#contact">Book a consultation<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#hero">Home</a>
+  <a href="#simulator">Simulator</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#contact">Contact</a>
+  <p class="menu__foot">950 Echo Lane, Suite 200, Houston<br><a href="tel:+18325866573">(832) 586-6573</a></p>
+</div>
+
+<main id="main">
+  <section id="hero" class="hero-section" aria-labelledby="hero-title">
+    <div class="hero__mark" aria-hidden="true">
+      <svg viewBox="0 0 800 800">
+        <circle class="ring" cx="400" cy="400" r="380"/>
+        <circle class="ring" cx="400" cy="400" r="300"/>
+        <circle class="ring" cx="400" cy="400" r="292"/>
+        <g class="spin">
+          <path id="sealpath" d="M400 400 m-340 0 a340 340 0 1 1 680 0 a340 340 0 1 1 -680 0" fill="none"/>
+          <text class="label"><textPath href="#sealpath">KATHERINE BOYD LAW · ESTATE PLANNING &amp; PROBATE · HOUSTON, TEXAS · EST. 2011 · </textPath></text>
+        </g>
+        <text x="400" y="470" text-anchor="middle" font-size="230" letter-spacing="-6">KB</text>
+      </svg>
+    </div>
+    <div class="hero__inner">
+      <span class="badge hero-reveal">Estate Planning &amp; Probate · West Houston</span>
+      <h1 class="hero__title hero-reveal" id="hero-title">Your Legacy, Preserved <em>Without Compromise.</em></h1>
+      <p class="hero__text hero-reveal">Certainty for your family, protection for what you have built, and a calm, compassionate guide when it matters most. Every will, trust and probate matter is explained in plain language, so you always know what you are signing and why.</p>
+      <p class="hero__creds hero-reveal"><span>Licensed in Texas · Oklahoma · New Mexico</span><span>Steed Barker Boyd Madden</span></p>
+      <div class="hero__ctas hero-reveal">
+        <a class="btn-gold" href="#contact">Schedule Private Consultation</a>
+        <a class="link-gold" href="#simulator">Explore the Texas Intestate Simulator<span class="arrow" aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </section>
+  <section id="simulator" class="sim" aria-labelledby="sim-title">
+    <div class="sim__head">
+      <span class="eyebrow sim-reveal">Texas Intestate Succession Law</span>
+      <h2 class="sim__title sim-reveal" id="sim-title">If You Leave It Blank, <em>Texas Writes It For You.</em></h2>
+      <p class="sim__sub sim-reveal">Answer three questions to see how the State of Texas distributes your estate without a valid Will.</p>
+    </div>
+    <div class="sim__grid">
+      <form class="sim__controls" id="sim-form" aria-label="Your situation">
+        <div class="q sim-reveal"><fieldset><legend><span>I</span>Are you legally married?</legend>
+          <div class="opts"><label class="opt"><input type="radio" name="married" value="yes" checked><span>Yes</span></label><label class="opt"><input type="radio" name="married" value="no"><span>No</span></label></div></fieldset></div>
+        <div class="q sim-reveal"><fieldset><legend><span>II</span>Do you have children?</legend>
+          <div class="opts"><label class="opt"><input type="radio" name="kids" value="yes" checked><span>Yes</span></label><label class="opt"><input type="radio" name="kids" value="no"><span>No</span></label></div></fieldset></div>
+        <div class="q sim-reveal" id="q3"><fieldset id="q3-set"><legend><span>III</span>Are all of your children also from your current spouse?</legend>
+          <div class="opts"><label class="opt"><input type="radio" name="shared" value="yes" checked><span>Yes</span></label><label class="opt"><input type="radio" name="shared" value="no"><span>No</span></label></div>
+          <p class="q__note" id="q3-note" hidden>Only applies if you are married and have children.</p></fieldset></div>
+      </form>
+      <article class="verdict sim-reveal" aria-live="polite" aria-atomic="true">
+        <p class="verdict__label">State of Texas Statutory Outcome</p>
+        <p class="verdict__case" id="v-case"></p>
+        <h3 class="verdict__title" id="v-title"></h3>
+        <div class="verdict__rows" id="v-rows"></div>
+        <div class="verdict__foot">
+          <p class="verdict__disc">A simplified summary of the Texas Estates Code, Chapter 201, for general information only. It is not legal advice, and it cannot name a guardian for your children. Only a Will can.</p>
+          <a class="btn-gold" href="#contact">Write Your Own Will</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="services" class="svc" aria-labelledby="svc-title">
+    <div class="svc__head">
+      <div>
+        <span class="eyebrow svc-reveal">Bespoke Legal Architecture</span>
+        <h2 class="svc__title svc-reveal" id="svc-title">Comprehensive Protection, <em>Tailored to Your Family.</em></h2>
+      </div>
+      <p class="svc__intro svc-reveal">Two practice areas, one standard: every document drafted for your circumstances, every step explained before you take it.</p>
+    </div>
+    <div class="svc__rule" aria-hidden="true"></div>
+    <div class="svc__grid">
+      <article class="card svc-reveal">
+        <span class="card__num">I.</span>
+        <h3>Estate Planning<small>Non-Tax Focus</small></h3>
+        <p class="card__desc">Clear, legally sound documents that give your family certainty and you peace of mind, from a first Will for young parents to a full update after life changes.</p>
+        <ul class="deliv">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Last Will &amp; Testament</b><span>Including the appointment of guardians for minor children.</span></div></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Revocable Living Trusts</b><span>Hold assets for your family and keep them out of probate court.</span></div></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Durable Financial Power of Attorney</b><span>A trusted person can manage your finances if you cannot.</span></div></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Medical Power of Attorney &amp; Advance Directives</b><span>Living Wills that record your healthcare and end-of-life wishes.</span></div></li>
+        </ul>
+        <div class="card__foot">
+          <div class="timeline">
+            <span class="timeline__label">Typical Timelines</span>
+            <div class="tl"><span>Simple Plan (Will + Powers of Attorney)</span><b>2–3 Weeks</b></div>
+            <div class="tl"><span>Complex Plan (Trusts or Business Interests)</span><b>4–6 Weeks</b></div>
+          </div>
+        </div>
+      </article>
+      <article class="card svc-reveal">
+        <span class="card__num">II.</span>
+        <h3>Will-Based Probate<small>&amp; Estate Administration</small></h3>
+        <p class="card__desc">Losing a loved one is hard enough. Executors receive calm, step-by-step guidance through the Texas probate process, so their duties are fulfilled efficiently and without added stress.</p>
+        <ul class="deliv">
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Proving &amp; Validating the Will</b><span>Taking the Will through Texas probate court so it can be carried out.</span></div></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Step-by-Step Guidance for Appointed Executors</b><span>Support for personal representatives fulfilling their legal obligations.</span></div></li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 1l7 7-7 7-7-7z"/></svg><div><b>Estate Inventory, Creditor Notice &amp; Asset Distribution</b><span>Collecting, listing and distributing the estate to the rightful heirs.</span></div></li>
+        </ul>
+        <div class="card__foot">
+          <p class="focus">Dedicated counsel for West Houston families navigating loss with dignity and precision.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="process" class="proc" aria-labelledby="proc-title">
+    <div class="proc__head">
+      <span class="eyebrow proc-reveal">The Client Journey</span>
+      <h2 class="proc__title proc-reveal" id="proc-title">Clarity in Three <em>Deliberate Steps.</em></h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num" aria-hidden="true">I</span>
+        <h3 class="proc-reveal">Consultation &amp; Strategy</h3>
+        <p class="proc-reveal">We talk about your family, your assets and your concerns in plain English, with no legal jargon, and design a plan built around your life.</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">II</span>
+        <h3 class="proc-reveal">Collaborative Drafting</h3>
+        <p class="proc-reveal">Each document is drafted meticulously, then reviewed together clause by clause until it reflects your wishes with complete precision.</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">III</span>
+        <h3 class="proc-reveal">Signing Ceremony &amp; Lifelong Counsel</h3>
+        <p class="proc-reveal">A formal signing at the Echo Lane office that meets every Texas requirement, and continued support whenever your life changes.</p>
+      </li>
+    </ol>
+
+    <div class="profile" id="about">
+      <div class="insignia" aria-hidden="true">
+        <svg viewBox="0 0 400 440">
+          <path class="ln" d="M40 140 L200 40 L360 140"/>
+          <path class="ln" d="M60 140 H340"/>
+          <path class="ln" d="M52 150 H348"/>
+          <path class="ln" d="M90 160 V330 M130 160 V330 M180 160 V330 M220 160 V330 M270 160 V330 M310 160 V330"/>
+          <path class="ln" d="M60 340 H340 M48 352 H352 M36 364 H364"/>
+          <text class="dp" x="200" y="124" text-anchor="middle" font-size="40" letter-spacing="2">KB</text>
+          <text class="tx" x="200" y="402" text-anchor="middle" font-size="13" letter-spacing="5">SBBM PARTNER · EST. 2011</text>
+          <text class="tx" x="200" y="428" text-anchor="middle" font-size="12" letter-spacing="8" opacity=".7">TX · OK · NM</text>
+        </svg>
+      </div>
+      <div>
+        <h3 class="proc-reveal">Katherine Boyd<span>Partner at Steed Barker Boyd Madden</span></h3>
+        <div class="profile__bio proc-reveal">
+          <p>Katherine began her legal career in <strong>2011 as an oil and gas title attorney</strong>, tracing ownership and property rights with surgical rigor, where a single overlooked document can change who owns what.</p>
+          <p>Since <strong>2020</strong> she has dedicated her practice to <strong>estate planning and probate in West Houston</strong>, bringing that same precision to the families who trust her with what matters most.</p>
+        </div>
+        <table class="creds proc-reveal">
+          <tbody>
+            <tr><th scope="row">Education</th><td>J.D., cum laude, California Western School of Law<span>B.A., University of Wisconsin–Madison</span></td></tr>
+            <tr><th scope="row">Bar Admissions</th><td>Texas · Oklahoma · New Mexico</td></tr>
+            <tr><th scope="row">Firm Affiliation</th><td>Partner, Steed Barker Boyd Madden (SBBM)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="faqsec" aria-labelledby="faq-title">
+    <figure class="quote faq-reveal">
+      <svg class="quote__mark" viewBox="0 0 100 80" fill="currentColor" aria-hidden="true"><path d="M0 80V48C0 22 14 6 40 0l4 10C28 16 21 26 20 40h20v40H0zm56 0V48C56 22 70 6 96 0l4 10C84 16 77 26 76 40h20v40H56z"/></svg>
+      <div class="quote__stars" aria-label="Five-star review"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1l2.1 4.6 5 .5-3.8 3.4 1.1 5L8 12l-4.4 2.5 1.1-5L.9 6.1l5-.5z"/></svg></div>
+      <blockquote><p>“Katherine was fantastic to work with. Very knowledgeable, very responsive to emails or phone calls. She helped guide us through the process and ensured we understood what our options were and what those choices meant. We will absolutely use her services again if the need arises.”</p></blockquote>
+      <figcaption>— Heather R. · Estate Planning Client</figcaption>
+    </figure>
+    <div class="faq2">
+      <div class="faq2__head">
+        <span class="eyebrow faq-reveal">Common Inquiries</span>
+        <h2 class="faq2__title faq-reveal" id="faq-title">Frequently Asked <em>Questions.</em></h2>
+        <p class="faq2__note faq-reveal">Have a question that is not listed? <a href="#contact">Ask Katherine directly.</a></p>
+      </div>
+      <div class="acc faq-reveal">
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-p1" id="faq-b1">Do I really need an estate plan if I don't have a large estate?<span class="acc__icon" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-p1" role="region" aria-labelledby="faq-b1"><p>Yes. An estate plan is not only about money. It decides who makes medical and financial decisions for you if you cannot, it names guardians for your minor children, and it spares your family the cost, delay and uncertainty of going to court.</p></div>
+        </div>
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-p2" id="faq-b2">How often should I update my estate plan?<span class="acc__icon" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-p2" role="region" aria-labelledby="faq-b2"><p>Every three to five years, or sooner after a major event: a marriage or divorce, the birth of a child, the death of a beneficiary, or a significant change in your finances.</p></div>
+        </div>
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-p3" id="faq-b3">What happens if I pass away without a Will in Texas?<span class="acc__icon" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-p3" role="region" aria-labelledby="faq-b3"><p>Texas intestacy laws apply. A rigid statutory formula decides who inherits your property, regardless of what you would have wanted. The simulator above shows how that formula plays out for your family.</p></div>
+        </div>
+        <div class="acc__item">
+          <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="faq-p4" id="faq-b4">How long does the process take?<span class="acc__icon" aria-hidden="true"></span></button></h3>
+          <div class="acc__panel" id="faq-p4" role="region" aria-labelledby="faq-b4"><p>A simple plan with a Will and powers of attorney takes two to three weeks. A plan that includes a trust or business interests takes four to six weeks.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="site-foot" aria-labelledby="cf-title">
+  <div class="cf">
+    <div>
+      <span class="eyebrow cf-reveal">Private Consultations · West Houston</span>
+      <h2 class="cf__title cf-reveal" id="cf-title">Protect What <em>Matters Most.</em></h2>
+      <p class="cf__sub cf-reveal">Compassionate legal guidance for your family's future.</p>
+      <dl class="cf__list cf-reveal">
+        <div><dt>Office</dt><dd><a href="https://maps.google.com/?q=950+Echo+Lane+Suite+200+Houston+TX+77024" target="_blank" rel="noopener">950 Echo Lane, Suite 200<br>Houston, TX 77024</a><span>Memorial / West Houston</span></dd></div>
+        <div><dt>Direct Phone</dt><dd><a href="tel:8325866573">(832) 586-6573</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:kboyd@steedbarkerlaw.com">kboyd@steedbarkerlaw.com</a></dd></div>
+        <div><dt>Hours</dt><dd>Monday – Friday, 9:00 a.m. – 4:00 p.m.<span>By Appointment Only</span></dd></div>
+      </dl>
+    </div>
+    <div class="form-card cf-reveal" id="form-card">
+      <h3>Request a Private Appointment</h3>
+      <p>Share a few details and the office will reach out to confirm a time.</p>
+      <form class="appt" id="appt" novalidate>
+        <div class="field"><label for="f-name">Full Name</label><input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Jane Doe"></div>
+        <div class="field"><label for="f-email">Email Address</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="jane@example.com"></div>
+        <div class="field"><label for="f-phone">Phone Number</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="(713) 555-0100"></div>
+        <div class="field"><label for="f-type">Matter Type</label><select id="f-type" name="type" required><option value="" disabled selected>Select one</option><option>Estate Planning</option><option>Will-Based Probate</option><option>Updating Existing Plan</option></select></div>
+        <div class="field field--full"><label for="f-msg">How can we help protect your family?</label><textarea id="f-msg" name="message" rows="3" placeholder="A few words about your situation"></textarea></div>
+        <div class="appt__actions">
+          <small>Please do not include confidential details. Submitting this form does not create an attorney-client relationship.</small>
+          <button class="btn-gold" type="submit">Request Appointment</button>
+        </div>
+      </form>
+      <div class="thanks" role="status" aria-live="polite">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M20 33l8 8 16-17"/></svg>
+        <h3>Request Received</h3>
+        <p>Thank you. Our office will contact you shortly to confirm your appointment.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="bottom__brand"><b>KATHERINE BOYD LAW</b><span>Partner at Steed Barker Boyd Madden (SBBM)</span></div>
+    <p class="bottom__legal">© 2026 Katherine Boyd Law. All Rights Reserved. Licensed in TX, OK &amp; NM. Principal Office: Houston, TX.</p>
+  </div>
+  <p class="bottom__note">Attorney advertising. The information on this website is general and is not legal advice. Sample design prepared by <a href="https://ocswebs.com" target="_blank" rel="noopener">OCSWebs</a>.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var nav=document.getElementById('nav'), burger=document.getElementById('burger'), menu=document.getElementById('menu');
+  var lenis=null;
+
+  if(window.Lenis&&!reduce){
+    lenis=new Lenis({duration:1.25,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},smoothWheel:true,wheelMultiplier:.9,touchMultiplier:1.4});
+    if(window.gsap&&window.ScrollTrigger){
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll',ScrollTrigger.update);
+      gsap.ticker.add(function(time){lenis.raf(time*1000)});
+      gsap.ticker.lagSmoothing(0);
+    }else{
+      (function raf(t){lenis.raf(t);requestAnimationFrame(raf)})(performance.now());
+    }
+  }else if(window.gsap&&window.ScrollTrigger){
+    gsap.registerPlugin(ScrollTrigger);
+  }
+  window.lenis=lenis;
+
+  var pre=document.getElementById('preloader');
+  function endPreload(){
+    document.body.classList.remove('is-loading');
+    if(pre)pre.style.display='none';
+    if(lenis&&lenis.start)lenis.start();
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  }
+  function heroIn(){
+    gsap.timeline().to('.hero-reveal',{y:0,opacity:1,duration:1.1,ease:'power3.out',stagger:.14});
+    gsap.from('.hero__mark',{opacity:0,scale:.92,duration:2.4,ease:'power3.out'});
+  }
+  if(window.gsap&&!reduce&&pre){
+    if(lenis&&lenis.stop)lenis.stop();
+    window.scrollTo(0,0);
+    var pl=gsap.timeline({delay:.1});
+    pl.to('.pl__seal circle',{strokeDashoffset:0,duration:.8,ease:'power2.inOut',stagger:.08},0)
+      .to('.pl__seal text',{opacity:1,duration:.8,ease:'power2.out'},0)
+      .to('.pl__name',{opacity:1,duration:.8,ease:'power2.out'},0)
+      .to('.pl__bar span',{width:'100%',duration:.8,ease:'power2.inOut'},0)
+      .add(heroIn,'+=.15')
+      .to(pre,{yPercent:-100,duration:.8,ease:'power4.inOut',onComplete:endPreload},'<');
+  }else if(window.gsap&&!reduce){
+    heroIn();
+  }else{
+    document.documentElement.classList.remove('js-anim');
+    endPreload();
+  }
+
+  var form=document.getElementById('sim-form');
+  if(form){
+    var q3=document.getElementById('q3'), q3set=document.getElementById('q3-set'), q3note=document.getElementById('q3-note');
+    var vCase=document.getElementById('v-case'), vTitle=document.getElementById('v-title'), vRows=document.getElementById('v-rows');
+    var SEP_KIDS={h:'Separate property',t:'Owned before marriage, gifts and inheritances. Your spouse receives one third of your personal property and a life estate (the right to use) in one third of your real estate. Your children receive the other two thirds of personal property and the real estate itself.',bar:[[33,'Spouse'],[67,'Children']]};
+    var CASES={
+      'yes-yes-yes':{c:'Married, all children shared with your spouse',t:'Your spouse keeps the marital estate. Your separate property is split.',rows:[{h:'Community property',t:'Everything built during the marriage passes 100% to your surviving spouse.',bar:[[100,'Spouse']]},SEP_KIDS]},
+      'yes-yes-no':{c:'Married, with a child from another relationship',t:'Your half of the marital estate skips your spouse.',rows:[{h:'Community property',t:'Your 50% share passes immediately to all of your children, including those from a prior relationship. Your spouse keeps only their own 50%.',bar:[[50,'Spouse (own half)'],[50,'Your children']]},SEP_KIDS]},
+      'yes-no':{c:'Married, no children',t:'Your spouse inherits most, but not all.',rows:[{h:'Community property',t:'Everything built during the marriage passes 100% to your surviving spouse.',bar:[[100,'Spouse']]},{h:'Separate property',t:'Your spouse receives all of your personal property but only half of your separate real estate. The other half goes to your parents, or to your brothers and sisters if your parents have died.',bar:[[50,'Spouse'],[50,'Parents / siblings']]}]},
+      'no-yes':{c:'Not married, with children',t:'Your children inherit everything, in equal shares.',rows:[{h:'Your entire estate',t:'Divided equally among your children. If a child has died, that child’s own children take their share. A court, not you, picks who raises any minor child.',bar:[[100,'Children']]}]},
+      'no-no':{c:'Not married, no children',t:'Your family tree decides, by statute.',rows:[{h:'Your entire estate',t:'Goes to your parents and then to your brothers and sisters, in shares fixed by law. If none survive, it moves to grandparents and more distant relatives, never to friends or charities you may have meant to include.',bar:[[50,'Parents'],[50,'Siblings']]}]}
+    };
+    function row(r){
+      var bar='<div class="bar">'+r.bar.map(function(b){return '<i style="width:0" data-w="'+b[0]+'"></i>'}).join('')+'</div>';
+      var leg='<div class="legend">'+r.bar.map(function(b){return '<span><b></b>'+b[1]+' '+b[0]+'%</span>'}).join('')+'</div>';
+      return '<div class="vrow"><h4>'+r.h+'</h4><p>'+r.t+'</p>'+bar+leg+'</div>';
+    }
+    function render(first){
+      var m=form.elements.married.value, k=form.elements.kids.value, sh=form.elements.shared.value;
+      var applies=m==='yes'&&k==='yes';
+      q3.classList.toggle('is-off',!applies);
+      q3set.disabled=!applies;
+      q3note.hidden=applies;
+      var d=CASES[applies?('yes-yes-'+sh):(m+'-'+k)];
+      function paint(){
+        vCase.textContent=d.c; vTitle.textContent=d.t; vRows.innerHTML=d.rows.map(row).join('');
+        requestAnimationFrame(function(){requestAnimationFrame(function(){vRows.querySelectorAll('.bar i').forEach(function(i){i.style.width=i.dataset.w+'%'})})});
+      }
+      if(first||!window.gsap||reduce){paint();return;}
+      gsap.to([vCase,vTitle,vRows],{opacity:0,y:-8,duration:.22,ease:'power2.in',onComplete:function(){
+        paint(); gsap.fromTo([vCase,vTitle,vRows],{opacity:0,y:14},{opacity:1,y:0,duration:.6,ease:'power3.out',stagger:.06});
+      }});
+    }
+    form.addEventListener('change',function(){render(false)});
+    render(true);
+  }
+
+  if(window.gsap&&window.ScrollTrigger&&!reduce){
+    gsap.to('.sim-reveal',{y:0,opacity:1,duration:1,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'#simulator',start:'top 72%'}});
+  }
+
+  if(window.gsap&&window.ScrollTrigger&&!reduce){
+    gsap.to('.svc__head .svc-reveal',{y:0,opacity:1,duration:1,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'#services',start:'top 75%'}});
+    gsap.to('.svc__rule',{scaleX:1,duration:1.6,ease:'power3.inOut',scrollTrigger:{trigger:'.svc__rule',start:'top 85%'}});
+    gsap.to('.svc__grid .card',{y:0,opacity:1,duration:1.1,ease:'power3.out',stagger:.2,scrollTrigger:{trigger:'.svc__grid',start:'top 80%'}});
+  }
+
+  if(window.gsap&&window.ScrollTrigger&&!reduce){
+    gsap.to('.proc__head .proc-reveal',{y:0,opacity:1,duration:1,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'#process',start:'top 75%'}});
+    gsap.to('.step__num',{y:0,opacity:1,duration:1.2,ease:'power3.out',stagger:.18,scrollTrigger:{trigger:'.steps',start:'top 80%'}});
+    gsap.to('.step .proc-reveal',{y:0,opacity:1,duration:1,ease:'power3.out',stagger:.08,delay:.2,scrollTrigger:{trigger:'.steps',start:'top 80%'}});
+    gsap.from('.profile',{y:60,opacity:0,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'.profile',start:'top 82%'}});
+    gsap.to('.profile .proc-reveal',{y:0,opacity:1,duration:1,ease:'power3.out',stagger:.14,delay:.25,scrollTrigger:{trigger:'.profile',start:'top 82%'}});
+    gsap.from('.insignia .ln',{strokeDasharray:600,strokeDashoffset:600,duration:2.2,ease:'power2.inOut',stagger:.06,scrollTrigger:{trigger:'.profile',start:'top 82%'}});
+  }
+
+  document.querySelectorAll('.acc__item').forEach(function(item){
+    var btn=item.querySelector('.acc__btn'), panel=item.querySelector('.acc__panel');
+    btn.addEventListener('click',function(){
+      var open=!item.classList.contains('is-open');
+      document.querySelectorAll('.acc__item.is-open').forEach(function(o){
+        if(o!==item){o.classList.remove('is-open');o.querySelector('.acc__btn').setAttribute('aria-expanded','false');
+          var op=o.querySelector('.acc__panel'); if(window.gsap&&!reduce){gsap.to(op,{height:0,duration:.5,ease:'power3.inOut'})}else{op.style.height='0px'}}
+      });
+      item.classList.toggle('is-open',open); btn.setAttribute('aria-expanded',String(open));
+      if(window.gsap&&!reduce){gsap.to(panel,{height:open?'auto':0,duration:.6,ease:'power3.inOut',onComplete:function(){if(window.ScrollTrigger)ScrollTrigger.refresh()}})}
+      else{panel.style.height=open?'auto':'0px'}
+    });
+  });
+
+  if(window.gsap&&window.ScrollTrigger&&!reduce){
+    gsap.to('.quote.faq-reveal',{y:0,opacity:1,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'.quote',start:'top 82%'}});
+    gsap.from('.quote blockquote p',{opacity:0,y:20,duration:1.4,delay:.2,ease:'power3.out',scrollTrigger:{trigger:'.quote',start:'top 82%'}});
+    gsap.to('.faq2 .faq-reveal',{y:0,opacity:1,duration:1,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.faq2',start:'top 80%'}});
+  }
+
+  var appt=document.getElementById('appt'), card=document.getElementById('form-card');
+  if(appt){
+    appt.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!appt.checkValidity()){
+        appt.querySelectorAll('input,select').forEach(function(f){f.classList.toggle('bad',!f.checkValidity())});
+        var first=appt.querySelector(':invalid'); if(first)first.focus();
+        if(appt.reportValidity)appt.reportValidity();
+        return;
+      }
+      card.style.minHeight=card.offsetHeight+'px';
+      card.classList.add('is-sent');
+      appt.reset();
+    });
+  }
+
+  if(window.gsap&&window.ScrollTrigger&&!reduce){
+    gsap.to('.cf .cf-reveal',{y:0,opacity:1,duration:1.1,ease:'power3.out',stagger:.12,scrollTrigger:{trigger:'#contact',start:'top 78%'}});
+    gsap.from('.bottom,.bottom__note',{opacity:0,y:20,duration:1,ease:'power3.out',stagger:.1,scrollTrigger:{trigger:'.bottom',start:'top 98%'}});
+  }
+
+  function setMenu(open){
+    nav.classList.toggle('is-open',open);
+    menu.classList.toggle('is-open',open);
+    menu.setAttribute('aria-hidden',String(!open));
+    burger.setAttribute('aria-expanded',String(open));
+    burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    if(lenis){open?lenis.stop():lenis.start();}
+    document.body.style.overflow=open?'hidden':'';
+  }
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('is-open'))});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('is-open'))setMenu(false)});
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); if(id.length<2)return;
+      var target=document.querySelector(id); if(!target)return;
+      e.preventDefault();
+      if(menu.classList.contains('is-open'))setMenu(false);
+      if(lenis){lenis.scrollTo(target,{offset:id==='#hero'?0:-90,duration:1.4});}
+      else{target.scrollIntoView({behavior:reduce?'auto':'smooth'});}
+    });
+  });
+
+  var lastY=0;
+  function onScroll(y){
+    nav.classList.toggle('is-scrolled',y>40);
+    nav.classList.toggle('is-hidden',y>lastY&&y>400&&!menu.classList.contains('is-open'));
+    lastY=y;
+  }
+  if(lenis){lenis.on('scroll',function(e){onScroll(e.scroll)})}
+  else{window.addEventListener('scroll',function(){onScroll(window.scrollY)},{passive:true})}
+
+  var links=[].slice.call(document.querySelectorAll('.nav__links a'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){var id='#'+en.target.id;links.forEach(function(l){l.classList.toggle('is-active',l.getAttribute('href')===id)})}
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(l){var s=document.querySelector(l.getAttribute('href'));if(s)io.observe(s)});
+  }
+});
+</script>
+<script>setTimeout(function(){var p=document.getElementById('preloader');if(p&&p.style.display!=='none'&&!window.gsap){p.style.display='none';document.body.classList.remove('is-loading');document.documentElement.classList.remove('js-anim')}},2500)</script>
+</body>
+</html>
